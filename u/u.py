@@ -36,3 +36,8 @@ def read_ssv(filename):
                 d.append(rd)
 
         return d
+
+def read_tokens(filename, regex):
+    with open(filename, 'r') as f:
+        content = f.read()
+        return re.findall(regex, content)
