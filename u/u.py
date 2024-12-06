@@ -42,3 +42,13 @@ def read_tokens(filename, regex):
     with open(filename, "r") as f:
         content = f.read()
         return re.findall(regex, content)
+
+def read_numbers(s: str):
+    l = list()
+    lines = s.splitlines()
+    for line in lines:
+        pl = re.findall(r"\d+", line)
+        pl = [int(n) for n in pl]
+        l.append(pl)
+    return l
+
