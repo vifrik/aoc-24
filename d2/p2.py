@@ -29,7 +29,7 @@ def main():
     d = u.read_ssv("i.txt")
     s = 0
 
-    for r in d[:40]:
+    for r in d:
         parts = list()
         print(" " + str(r))
         for iidx in range(len(r)):
